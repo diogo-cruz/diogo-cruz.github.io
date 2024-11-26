@@ -667,3 +667,21 @@ table td {
     background-color: var(--accent-color);
     color: white;
 }
+
+.publications h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.publication .description {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.publication-list {
+    margin-bottom: 3rem;
+}
