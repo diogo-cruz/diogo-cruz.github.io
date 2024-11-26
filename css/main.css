@@ -609,3 +609,61 @@ table td {
 .prev-post, .next-post {
   max-width: 33%;
 }
+
+.publications {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.scholar-link {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+}
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.publication {
+    padding: 1.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.publication:hover {
+    transform: translateX(10px);
+}
+
+.publication h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent-color);
+}
+
+.publication .authors {
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+
+.publication .venue {
+    margin: 0.5rem 0;
+    color: var(--text-secondary);
+}
+
+.paper-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.paper-link:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
