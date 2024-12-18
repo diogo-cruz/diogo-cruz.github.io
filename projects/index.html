@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects - Diogo Cruz</title>
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+    
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    <style>
+        .project-list {
+            margin: 2rem 0;
+        }
+        .project {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray);
+        }
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project h3 {
+            margin-bottom: 0.5rem;
+        }
+        .project-links {
+            margin-top: 1rem;
+        }
+        .project-links a {
+            margin-right: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        .project-description {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        .tech-stack {
+            margin-top: 0.5rem;
+            font-size: 0.9em;
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        setThemeByUserPref();
+    </script>
+    <header class="header">
+        <nav class="header-nav">
+            <div class="avatar">
+                <a href="http://diogo-cruz.github.io/">
+                    <img src="http://diogo-cruz.github.io/avatar.png" alt="avatar" />
+                </a>
+            </div>
+
+            <div class="nav-title">
+                <a class="nav-brand" href="http://diogo-cruz.github.io/">Diogo Cruz</a>
+            </div>
+
+            <div class="nav-links">
+                <div class="nav-link">
+                    <a href="http://diogo-cruz.github.io/"><span data-feather='home'></span> Home </a>
+                </div>
+                
+                <div class="nav-link">
+                    <a href="http://diogo-cruz.github.io/posts/"><span data-feather='book'></span> Posts </a>
+                </div>
+                
+                <div class="nav-link">
+                    <a href="http://diogo-cruz.github.io/projects/"><span data-feather='code'></span> Projects </a>
+                </div>
+                
+                <div class="nav-link">
+                    <a href="http://diogo-cruz.github.io/tags/"><span data-feather='tag'></span> Tags </a>
+                </div>
+                
+                <div class="nav-link">
+                    <a href="https://github.com/diogo-cruz/"><span data-feather='github'></span>  </a>
+                </div>
+                
+                <div class="nav-link">
+                    <a href="/CV.pdf" target="_blank"><span data-feather='file-text'></span> CV </a>
+                </div>
+
+                <div class="nav-link">
+                    <a href="/publications/"><span data-feather='book'></span> Publications </a>
+                </div>
+
+                <div class="nav-link">
+                    <span data-feather="sun"></span>
+                    <span data-feather="moon"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="content">
+        <div class="container">
+            <h1>Projects</h1>
+            
+            <div class="project-list">
+                <div class="project">
+                    <h3>WMDP Benchmark Replication</h3>
+                    <p class="project-description">
+                        Active work on machine unlearning through benchmark replication. Part of the Research Engineers Club initiative to advance the field of AI safety through practical implementations.
+                    </p>
+                    <p class="tech-stack">
+                        <strong>Tech Stack:</strong> Python, PyTorch, Machine Learning
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/jeanne-s/wmdp_rec" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3>LLM Unlearning Evaluation Framework</h3>
+                    <p class="project-description">
+                        Developing a comprehensive framework for evaluating machine unlearning in Large Language Models. This project aims to establish standardized metrics and methodologies for assessing the effectiveness of unlearning techniques.
+                    </p>
+                    <p class="tech-stack">
+                        <strong>Tech Stack:</strong> Python, Transformers, Deep Learning
+                    </p>
+                </div>
+
+                <div class="project">
+                    <h3>Chess Neural Networks Analysis</h3>
+                    <p class="project-description">
+                        Research project focused on understanding learned look-ahead behavior in chess neural networks. Analyzing how neural networks develop and utilize predictive capabilities in strategic gameplay.
+                    </p>
+                    <p class="tech-stack">
+                        <strong>Tech Stack:</strong> Python, Neural Networks, Chess Engines
+                    </p>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1GPHvp6Z9Xgm9Rtur1RIuVJ5kCCm1yoDL/view?usp=sharing" target="_blank"><span data-feather="file-text"></span> View Draft</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3>Quantum Error Correction</h3>
+                    <p class="project-description">
+                        Implementation and analysis of noise guessing decoding for quantum error correction. This project explores novel approaches to improving the reliability of quantum computations.
+                    </p>
+                    <p class="tech-stack">
+                        <strong>Tech Stack:</strong> Python, Qiskit, Quantum Computing
+                    </p>
+                    <div class="project-links">
+                        <a href="https://doi.org/10.1109/ACCESS.2023.3327214" target="_blank"><span data-feather="external-link"></span> View Paper</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>&copy; 2023 The Marauders</span>
+        <span>
+            Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+        </span>
+    </footer>
+</body>
+</html> 
