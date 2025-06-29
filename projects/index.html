@@ -12,6 +12,20 @@
     <script src="/js/svg-injector.min.js"></script>
     <script src="/js/feather-icons.min.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        function toggleCollapsible(element) {
+            const content = element.nextElementSibling;
+            const arrow = element.querySelector('.collapsible-arrow');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                arrow.classList.remove('expanded');
+            } else {
+                content.classList.add('expanded');
+                arrow.classList.add('expanded');
+            }
+        }
+    </script>
 
     <style>
         .project-list {
@@ -47,6 +61,44 @@
             margin-top: 0.5rem;
             font-size: 0.9em;
             color: var(--gray);
+        }
+        .collapsible-section {
+            margin: 1.5rem 0;
+        }
+        .collapsible-header {
+            background: var(--bg-color);
+            border: 1px solid var(--gray);
+            padding: 1rem;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .collapsible-header:hover {
+            background: var(--hover-color, rgba(0,0,0,0.05));
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            border-left: 1px solid var(--gray);
+            border-right: 1px solid var(--gray);
+            border-bottom: 1px solid var(--gray);
+            border-radius: 0 0 4px 4px;
+        }
+        .collapsible-content.expanded {
+            max-height: none;
+            padding: 1rem;
+        }
+        .collapsible-arrow {
+            transition: transform 0.3s ease;
+            font-size: 1.2em;
+        }
+        .collapsible-arrow.expanded {
+            transform: rotate(90deg);
         }
     </style>
 </head>
@@ -163,7 +215,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: June 2025</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/multi_turn_jailbreaks" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/multi_turn_jailbreaks" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
@@ -174,7 +226,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: June 2025</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/eval_for_unlearning" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/eval_for_unlearning" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
@@ -185,8 +237,8 @@
                     </p>
                     <p class="last-updated"><em>Last updated: January 2025</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/leela-interp" target="_blank"><span data-feather="github"></span> View on GitHub</a>
-                        <a href="https://drive.google.com/file/d/1GPHvp6Z9Xgm9Rtur1RIuVJ5kCCm1yoDL/view?usp=sharing" target="_blank"><span data-feather="file-text"></span> View Draft</a>
+                        <a href="https://github.com/diogo-cruz/leela-interp" target="_blank"><span data-feather="github"></span> GitHub</a>
+                        <a href="https://drive.google.com/file/d/1GPHvp6Z9Xgm9Rtur1RIuVJ5kCCm1yoDL/view?usp=sharing" target="_blank"><span data-feather="file-text"></span> Draft</a>
                     </div>
                 </div>
 
@@ -197,7 +249,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: January 2025</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/ai_safety_scraper" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/ai_safety_scraper" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
@@ -211,102 +263,120 @@
                     </p>
                     <p class="last-updated"><em>Last updated: June 2023</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/nninfo" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/nninfo" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
             </div>
 
             <h2>Quantum Computing</h2>
-            <div class="project-list">
-                <div class="project">
-                    <h3>QGRAND</h3>
-                    <p class="project-description">
-                        Quantum computing project focused on advanced quantum algorithms and implementations. Explores novel approaches to quantum computation with applications in optimization and machine learning.
-                    </p>
-                    <p class="last-updated"><em>Last updated: July 2024</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/QGRAND" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+            
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                    <h3>PhD Projects</h3>
+                    <span class="collapsible-arrow">▶</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="project-list">
+                        <div class="project">
+                            <h3>QGRAND</h3>
+                            <p class="project-description">
+                                Quantum computing project focused on advanced quantum algorithms and implementations. Explores novel approaches to quantum computation with applications in optimization and machine learning.
+                            </p>
+                            <p class="last-updated"><em>Last updated: July 2024</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/QGRAND" target="_blank"><span data-feather="github"></span> GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <h3>Classiq Hamiltonian Simulation</h3>
+                            <p class="project-description">
+                                Quantum computing project focused on Hamiltonian simulation using advanced quantum algorithms. This work explores methods for simulating quantum systems and their applications in quantum chemistry and physics.
+                            </p>
+                            <p class="last-updated"><em>Last updated: June 2022</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/Classiq-Hamiltonian-Simulation" target="_blank"><span data-feather="github"></span> GitHub</a>
+                                <a href="https://doi.org/10.1109/ACCESS.2023.3327214" target="_blank"><span data-feather="external-link"></span> Paper</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="project">
-                    <h3>Quantinuum iQuHACK 2024</h3>
-                    <p class="project-description">
-                        Participation in the Quantinuum iQuHACK 2024 in-person challenge, focusing on quantum computing applications and algorithm development. Collaborative project exploring cutting-edge quantum technologies.
-                    </p>
-                    <p class="last-updated"><em>Last updated: February 2024</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/2024_Quantinuum" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                    <h3>Hackathons</h3>
+                    <span class="collapsible-arrow">▶</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="project-list">
+                        <div class="project">
+                            <h3>Quantinuum iQuHACK 2024</h3>
+                            <p class="project-description">
+                                Participation in the Quantinuum iQuHACK 2024 in-person challenge, focusing on quantum computing applications and algorithm development. Collaborative project exploring cutting-edge quantum technologies.
+                            </p>
+                            <p class="last-updated"><em>Last updated: February 2024</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/2024_Quantinuum" target="_blank"><span data-feather="github"></span> GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <h3>QCHACK 2022</h3>
+                            <p class="project-description">
+                                Participation in the Quantum Coalition Hackathon 2022, developing innovative quantum computing solutions. This hackathon project focuses on practical applications of quantum algorithms and technologies.
+                            </p>
+                            <p class="last-updated"><em>Last updated: April 2022</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/QCHACK2022" target="_blank"><span data-feather="github"></span> GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <h3>Microsoft x IonQ Challenge 2022</h3>
+                            <p class="project-description">
+                                Participation in the MIT iQuHACK 2022 Microsoft x IonQ Challenge, focusing on quantum computing applications using IonQ's trapped-ion quantum computers. This project explores quantum algorithms and their practical implementations.
+                            </p>
+                            <p class="last-updated"><em>Last updated: January 2022</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/2022_microsoft_ionq_challenge" target="_blank"><span data-feather="github"></span> GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <h3>QuGreen - Quantum Spectral Functions</h3>
+                            <p class="project-description">
+                                Repository for the Spectral Function Team in Qiskit Hackathon Europe, focusing on quantum algorithms for computing Green's functions and spectral properties of quantum systems.
+                            </p>
+                            <p class="last-updated"><em>Last updated: June 2021</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/QuGreen" target="_blank"><span data-feather="github"></span> GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <h3>Q-CTRL QCHACK Atomistic</h3>
+                            <p class="project-description">
+                                Repository for the QCHACK 2021 Hackathon focusing on quantum control applications in atomistic systems. This project explores quantum control techniques for manipulating atomic and molecular systems.
+                            </p>
+                            <p class="last-updated"><em>Last updated: April 2021</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/qctrl-qchack-Atomistic" target="_blank"><span data-feather="github"></span> GitHub</a>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <h3>patoLogic iQuHACK 2021</h3>
+                            <p class="project-description">
+                                Team patoLogic project from iQuHACK 2021, focusing on quantum computing applications and algorithm development. This collaborative hackathon project explores innovative quantum solutions.
+                            </p>
+                            <p class="last-updated"><em>Last updated: January 2021</em></p>
+                            <div class="project-links">
+                                <a href="https://github.com/diogo-cruz/2021_patoLogic" target="_blank"><span data-feather="github"></span> GitHub</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="project">
-                    <h3>Classiq Hamiltonian Simulation</h3>
-                    <p class="project-description">
-                        Quantum computing project focused on Hamiltonian simulation using advanced quantum algorithms. This work explores methods for simulating quantum systems and their applications in quantum chemistry and physics.
-                    </p>
-                    <p class="last-updated"><em>Last updated: June 2022</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/Classiq-Hamiltonian-Simulation" target="_blank"><span data-feather="github"></span> View on GitHub</a>
-                        <a href="https://doi.org/10.1109/ACCESS.2023.3327214" target="_blank"><span data-feather="external-link"></span> View Paper</a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3>QCHACK 2022</h3>
-                    <p class="project-description">
-                        Participation in the Quantum Coalition Hackathon 2022, developing innovative quantum computing solutions. This hackathon project focuses on practical applications of quantum algorithms and technologies.
-                    </p>
-                    <p class="last-updated"><em>Last updated: April 2022</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/QCHACK2022" target="_blank"><span data-feather="github"></span> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3>Microsoft x IonQ Challenge 2022</h3>
-                    <p class="project-description">
-                        Participation in the MIT iQuHACK 2022 Microsoft x IonQ Challenge, focusing on quantum computing applications using IonQ's trapped-ion quantum computers. This project explores quantum algorithms and their practical implementations.
-                    </p>
-                    <p class="last-updated"><em>Last updated: January 2022</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/2022_microsoft_ionq_challenge" target="_blank"><span data-feather="github"></span> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3>QuGreen - Quantum Spectral Functions</h3>
-                    <p class="project-description">
-                        Repository for the Spectral Function Team in Qiskit Hackathon Europe, focusing on quantum algorithms for computing Green's functions and spectral properties of quantum systems.
-                    </p>
-                    <p class="last-updated"><em>Last updated: June 2021</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/QuGreen" target="_blank"><span data-feather="github"></span> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3>Q-CTRL QCHACK Atomistic</h3>
-                    <p class="project-description">
-                        Repository for the QCHACK 2021 Hackathon focusing on quantum control applications in atomistic systems. This project explores quantum control techniques for manipulating atomic and molecular systems.
-                    </p>
-                    <p class="last-updated"><em>Last updated: April 2021</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/qctrl-qchack-Atomistic" target="_blank"><span data-feather="github"></span> View on GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3>patoLogic iQuHACK 2021</h3>
-                    <p class="project-description">
-                        Team patoLogic project from iQuHACK 2021, focusing on quantum computing applications and algorithm development. This collaborative hackathon project explores innovative quantum solutions.
-                    </p>
-                    <p class="last-updated"><em>Last updated: January 2021</em></p>
-                    <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/2021_patoLogic" target="_blank"><span data-feather="github"></span> View on GitHub</a>
-                    </div>
-                </div>
-
             </div>
 
             <h2>Miscellaneous</h2>
@@ -319,7 +389,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: June 2025</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/summarizer" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/summarizer" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
@@ -330,7 +400,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: February 2025</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/experiments" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/experiments" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
@@ -341,7 +411,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: January 2025</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/literature_review" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/literature_review" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
@@ -352,7 +422,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: May 2023</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/cs231n_2017" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/cs231n_2017" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
@@ -363,7 +433,7 @@
                     </p>
                     <p class="last-updated"><em>Last updated: May 2023</em></p>
                     <div class="project-links">
-                        <a href="https://github.com/diogo-cruz/learning_from_data" target="_blank"><span data-feather="github"></span> View on GitHub</a>
+                        <a href="https://github.com/diogo-cruz/learning_from_data" target="_blank"><span data-feather="github"></span> GitHub</a>
                     </div>
                 </div>
 
