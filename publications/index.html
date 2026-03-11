@@ -121,25 +121,49 @@
             <h2>AI Safety Research</h2>
             <div class="publication-list">
                 <div class="publication">
-                    <h3>Multi-Turn Jailbreaks Are Simpler Than They Seem</h3>
-                    <p class="authors">Yang, Y., Lee, J., Dick, A-K., Timm, J., Xie, F., Cruz, D.</p>
-                    <p class="venue">Submitted to COLM SoLaR Workshop 2025</p>
-                    <p class="description">We challenged the perceived sophistication of multi-turn jailbreak attacks on language models. Through systematic evaluation across GPT-4, Claude, and Gemini variants, we found that multi-turn jailbreaks are essentially equivalent to just resampling single-turn attacks multiple times. The key insight is that when you account for attackers learning from refusal patterns, the "sophisticated" multi-turn strategies don't provide much advantage over persistence. Surprisingly, we also discovered that reasoning models often become more vulnerable with increased reasoning effort.</p>
-                    <a href="https://drive.google.com/file/d/1-urGVhtTqqPxqydRKQdCP6U0ghnKF5us/view?usp=sharing" class="paper-link" target="_blank">Paper</a>
+                    <h3>When Refusals Fail: Unstable Safety Mechanisms in Long-Context LLM Agents</h3>
+                    <p class="authors">Hadeliya, T., Jauhar, M. A., Sakpal, N., Cruz, D.</p>
+                    <p class="venue">AAAI 2026 TrustAgent Workshop</p>
+                    <p class="description">We investigated how extended context windows affect LLM agent safety behaviors and found that safety mechanisms become unstable during long-horizon interactions. Models that reliably refuse harmful requests in short contexts can fail to maintain these refusals as conversation length increases.</p>
+                    <a href="https://arxiv.org/abs/2512.02445" class="paper-link" target="_blank">Paper</a>
                 </div>
 
                 <div class="publication">
-                    <h3>Robust Probe Training with Limited Labeled Samples</h3>
-                    <p class="authors">Cruz, D. et al.</p>
-                    <p class="venue">Conference paper in preparation, 2025</p>
-                    <p class="description">Developing methods to train more robust and performant probes when the amount of labeled samples is limited, particularly for hard-to-classify or superhuman tasks. This work addresses a key challenge in interpretability and evaluation of advanced AI systems.</p>
-                    <p class="status"><em>Conference paper in preparation (UC Berkeley CHAI work)</em></p>
+                    <h3>Inherited Goal Drift: Contextual Pressure Can Undermine Agentic Goals</h3>
+                    <p class="authors">Menon, A., Saebo, M., Crosse, T., Gibson, S., Jang, E., Cruz, D.</p>
+                    <p class="venue">ICLR Workshop, 2026</p>
+                    <p class="description">We investigated how contextual pressure causes LLM agents to gradually abandon their original goals during extended tasks. Key findings: model family matters significantly—OpenAI models follow instruction hierarchy well, and reasoning-enabled models stay on track better.</p>
+                    <a href="https://arxiv.org/abs/2603.03258" class="paper-link" target="_blank">Paper</a>
+                </div>
+
+                <div class="publication">
+                    <h3>Asymmetric Goal Drift in Coding Agents Under Value Conflict</h3>
+                    <p class="authors">Saebo, M., Gibson, S., Crosse, T., Menon, A., Jang, E., Cruz, D.</p>
+                    <p class="venue">ICLR Workshop, 2026</p>
+                    <p class="description">We found that coding agents exhibit asymmetric goal drift when facing value conflicts, with models self-causing drift in agentic coding setups without external pressure. The direction and magnitude of drift varies significantly across model families.</p>
+                    <a href="https://arxiv.org/abs/2603.03456" class="paper-link" target="_blank">Paper</a>
+                </div>
+
+                <div class="publication">
+                    <h3>Do Models Become Tribal? Testing Generalization of Preference-Based Selective Behavior</h3>
+                    <p class="authors">Shalibashvili, I., Nirvaan, M., Wong, J. R., Cruz, D.</p>
+                    <p class="venue">LessWrong blog post, 2026</p>
+                    <p class="description">We investigated whether fine-tuning can accidentally induce tribal behavior in language models, where models develop selective preferences that generalize beyond their training context. Originally framed as studying anti-sycophancy, the results revealed a different and potentially concerning pattern of group-based selective behavior.</p>
+                    <a href="https://www.lesswrong.com/posts/XNe26D9CbWkEHo3gi/" class="paper-link" target="_blank">Blog Post</a>
+                </div>
+
+                <div class="publication">
+                    <h3>Multi-Turn Jailbreaks Are Simpler Than They Seem</h3>
+                    <p class="authors">Yang, Y., Lee, J., Dick, A-K., Timm, J., Xie, F., Cruz, D.</p>
+                    <p class="venue">COLM SoLaR Workshop, 2025</p>
+                    <p class="description">We challenged the perceived sophistication of multi-turn jailbreak attacks on language models. Through systematic evaluation across GPT-4, Claude, and Gemini variants, we found that multi-turn jailbreaks are essentially equivalent to just resampling single-turn attacks multiple times. The key insight is that when you account for attackers learning from refusal patterns, the "sophisticated" multi-turn strategies don't provide much advantage over persistence. Surprisingly, we also discovered that reasoning models often become more vulnerable with increased reasoning effort.</p>
+                    <a href="https://arxiv.org/abs/2508.07646" class="paper-link" target="_blank">Paper</a>
                 </div>
 
                 <div class="publication">
                     <h3>Understanding the learned look-ahead behavior of chess neural networks</h3>
                     <p class="authors">Cruz, D.</p>
-                    <p class="venue">arXiv preprint arXiv:2505.21552, 2025</p>
+                    <p class="venue">Transactions on Machine Learning Research (TMLR), 2025</p>
                     <p class="description">Ever wonder if chess AIs actually "think ahead" like humans do? I dug into Leela Chess Zero's neural network and found it's genuinely considering moves up to 7 steps in the future, not just pattern matching. The cool part is it's actually weighing multiple possible game lines simultaneously, which explains why it plays so well.</p>
                     <a href="https://arxiv.org/abs/2505.21552" class="paper-link" target="_blank">Paper</a>
                 </div>
@@ -147,7 +171,7 @@
                 <div class="publication">
                     <h3>Prompt Attacks Reveal Superficial Knowledge Removal in Unlearning Methods</h3>
                     <p class="authors">Jang, Y., Hossain, S., Sreevatsa, A., Cruz, D.</p>
-                    <p class="venue">arXiv preprint arXiv:2506.10236, 2024</p>
+                    <p class="venue">COLM SoLaR Workshop, 2025</p>
                     <p class="description">We tested whether machine unlearning methods actually remove knowledge from language models or just hide it better. Turns out, simple prompt tricks like adding Hindi filler text can recover supposedly "unlearned" information with 57% accuracy! Most unlearning methods are doing surface-level suppression rather than true knowledge removal, which is pretty concerning for AI safety applications.</p>
                     <a href="https://arxiv.org/abs/2506.10236" class="paper-link" target="_blank">Paper</a>
                 </div>
@@ -231,7 +255,7 @@
     </main>
 
     <footer class="footer">
-        <span>&copy; 2025 Diogo Cruz</span>
+        <span>&copy; 2026 Diogo Cruz</span>
         <span>
             Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
         </span>

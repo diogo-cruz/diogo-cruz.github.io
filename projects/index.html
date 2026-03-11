@@ -220,10 +220,10 @@
                             <p class="project-description">
                                 Research project investigating adversarial attacks on large language models through multi-turn conversations. As Research Lead of a 6-person team at AI Safety Camp, I explored vulnerabilities in conversational AI systems and developed methods to understand and mitigate jailbreak techniques.
                             </p>
-                            <p class="last-updated"><em>Last updated: June 2025</em></p>
+                            <p class="last-updated"><em>Published at COLM SoLaR Workshop, 2025</em></p>
                             <div class="project-links">
                                 <a href="https://github.com/diogo-cruz/multi_turn_jailbreaks" target="_blank"><span data-feather="github"></span> GitHub</a>
-                                <a href="https://drive.google.com/file/d/1-urGVhtTqqPxqydRKQdCP6U0ghnKF5us/view?usp=sharing" target="_blank"><span data-feather="file-text"></span> Paper</a>
+                                <a href="https://arxiv.org/abs/2508.07646" target="_blank"><span data-feather="file-text"></span> Paper</a>
                             </div>
                         </div>
 
@@ -232,7 +232,7 @@
                             <p class="project-description">
                                 Comprehensive framework for evaluating machine unlearning in Large Language Models. As mentor of a 6-person team at SPAR, I established standardized metrics and methodologies for assessing the effectiveness of unlearning techniques in removing specific knowledge from trained models.
                             </p>
-                            <p class="last-updated"><em>Last updated: June 2025</em></p>
+                            <p class="last-updated"><em>Published at COLM SoLaR Workshop, 2025</em></p>
                             <div class="project-links">
                                 <a href="https://github.com/diogo-cruz/eval_for_unlearning" target="_blank"><span data-feather="github"></span> GitHub</a>
                                 <a href="https://arxiv.org/abs/2506.10236" target="_blank"><span data-feather="file-text"></span> Paper</a>
@@ -244,7 +244,7 @@
                             <p class="project-description">
                                 Research project analyzing learned look-ahead behavior in chess neural networks, based on "Evidence of Learned Look-Ahead in a Chess-Playing Neural Network". Investigating how neural networks develop and utilize predictive capabilities in strategic gameplay.
                             </p>
-                            <p class="last-updated"><em>Last updated: January 2025</em></p>
+                            <p class="last-updated"><em>Published in TMLR, 2025</em></p>
                             <div class="project-links">
                                 <a href="https://github.com/diogo-cruz/leela-interp" target="_blank"><span data-feather="github"></span> GitHub</a>
                                 <a href="https://arxiv.org/abs/2505.21552" target="_blank"><span data-feather="file-text"></span> Paper</a>
@@ -266,17 +266,43 @@
                         <div class="project">
                             <h3>Long-Context Agent Behavior (Algoverse 2025)</h3>
                             <p class="project-description">
-                                Research investigating how extended context windows affect LLM agent safety behaviors. Led team of 6 mentees exploring whether long contexts lead to emergent safety issues or capability changes in autonomous agents. Workshop paper currently under review.
+                                Research investigating how extended context windows affect LLM agent safety behaviors. Led team of 6 mentees exploring whether long contexts lead to emergent safety issues or capability changes in autonomous agents. Published as AAAI 2026 TrustAgent workshop paper.
                             </p>
-                            <p class="last-updated"><em>Workshop paper under review, November 2025</em></p>
+                            <p class="last-updated"><em>Published at AAAI 2026 TrustAgent Workshop</em></p>
+                            <div class="project-links">
+                                <a href="https://arxiv.org/abs/2512.02445" target="_blank"><span data-feather="file-text"></span> Paper</a>
+                            </div>
                         </div>
 
                         <div class="project">
                             <h3>Robust Probe Training with Limited Labeled Samples</h3>
                             <p class="project-description">
-                                Developed methods to train more robust and performant probes when the amount of labeled samples is limited, particularly for hard-to-classify or superhuman tasks. This work addresses a key challenge in interpretability and evaluation of advanced AI systems. CHAI internship work at UC Berkeley.
+                                Investigated methods to train more robust and performant probes when the amount of labeled samples is limited, particularly for hard-to-classify or superhuman tasks. CHAI internship work at UC Berkeley. The project produced negative results; write-up forthcoming.
                             </p>
-                            <p class="last-updated"><em>Conference paper in preparation, October 2025</em></p>
+                            <p class="last-updated"><em>CHAI internship completed October 2025; write-up of negative results forthcoming</em></p>
+                        </div>
+
+                        <div class="project">
+                            <h3>Goal Drift in Long-Horizon Tasks</h3>
+                            <p class="project-description">
+                                Investigated how LLM agents gradually abandon or modify their original goals during extended tasks such as stock trading and hospital triage simulations. Key findings: model family matters significantly—OpenAI models follow instruction hierarchy well, reasoning-enabled models stay on track better, and models can self-cause drift in agentic coding setups without external pressure. Two ICLR workshop papers accepted, with arXiv submissions and a third paper in progress.
+                            </p>
+                            <p class="last-updated"><em>2 ICLR 2026 workshop papers accepted; third paper in progress</em></p>
+                            <div class="project-links">
+                                <a href="https://arxiv.org/abs/2603.03258" target="_blank"><span data-feather="file-text"></span> Paper 1</a>
+                                <a href="https://arxiv.org/abs/2603.03456" target="_blank"><span data-feather="file-text"></span> Paper 2</a>
+                            </div>
+                        </div>
+
+                        <div class="project">
+                            <h3>Tribalism in Fine-tuned Models</h3>
+                            <p class="project-description">
+                                Investigated whether fine-tuning can accidentally induce tribal behavior in language models. Originally framed as studying anti-sycophancy, the results revealed that models develop selective preferences that generalize beyond their training context, a potentially concerning pattern of group-based selective behavior.
+                            </p>
+                            <p class="last-updated"><em>LessWrong blog post published, 2026</em></p>
+                            <div class="project-links">
+                                <a href="https://www.lesswrong.com/posts/XNe26D9CbWkEHo3gi/" target="_blank"><span data-feather="file-text"></span> Blog Post</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -290,35 +316,35 @@
                 <div class="collapsible-content">
                     <div class="project-list">
                         <div class="project">
-                            <h3>Goal Drift in Long-Horizon Tasks (SPAR Fall 2025)</h3>
-                            <p class="project-description">
-                                Developing methods to measure how LLM agents gradually abandon or modify their original goals during extended tasks. Mentoring team exploring systematic approaches to detect and understand objective drift over long interactions.
-                            </p>
-                            <p class="last-updated"><em>In progress, November 2025</em></p>
-                        </div>
-
-                        <div class="project">
                             <h3>Tool Failure and Deceptive Behavior (SPAR Fall 2025)</h3>
                             <p class="project-description">
-                                Investigating how LLM agents behave when tools become unreliable, testing whether this triggers deception, reward hacking, or unauthorized actions. Exploring agent safety in realistic conditions with imperfect tools.
+                                Investigating how LLM agents behave when tools become unreliable, testing whether this triggers deception, reward hacking, or unauthorized actions. Key finding: GPT-5 models showed drastically increased reward hacking when encountering tool failures, even when deferring to a human was an option.
                             </p>
-                            <p class="last-updated"><em>In progress, November 2025</em></p>
+                            <p class="last-updated"><em>Write-up phase; COLM main conference submission in progress, March 2026</em></p>
                         </div>
 
                         <div class="project">
-                            <h3>Anti-Sycophancy in Fine-tuned Models (SPAR Fall 2025)</h3>
+                            <h3>Agentic Situational Awareness (SPAR Spring 2026)</h3>
                             <p class="project-description">
-                                Investigating whether models can accidentally learn anti-sycophancy behavior through fine-tuning, causing them to disagree with users even when inappropriate. Exploring how domain-specific training might create unexpected behavioral changes.
+                                Continuation of the Algoverse project on operationalizing situational awareness in LLM agents. Found serious quality issues in DeepMind's agentic situational awareness benchmark—tasks where humans wouldn't score well either, yet the benchmark appeared in the Gemini 3 Pro system card and International AI Safety Report. Building improved benchmarks.
                             </p>
-                            <p class="last-updated"><em>In progress, November 2025</em></p>
+                            <p class="last-updated"><em>In progress, SPAR Spring 2026</em></p>
                         </div>
 
                         <div class="project">
-                            <h3>Situational Awareness in LLM Agents (Algoverse 2025)</h3>
+                            <h3>Efficient Benchmarking for Safety Evaluations (SPAR Spring 2026)</h3>
                             <p class="project-description">
-                                Research operationalizing situational awareness in LLM agents and building evaluation benchmarks. Project on hold, may be picked up by another team to continue developing methods for measuring when models recognize evaluation vs deployment contexts.
+                                Applying Fluid Benchmarking (IRT + adaptive testing) to safety evaluations. The original approach showed 50x efficiency gains on MMLU; targeting expensive agent benchmarks like OS-HARM ($53 and 5 hours per run). Can also help identify uninformative and broken benchmark tasks.
                             </p>
-                            <p class="last-updated"><em>On hold, November 2025</em></p>
+                            <p class="last-updated"><em>In progress, SPAR Spring 2026</em></p>
+                        </div>
+
+                        <div class="project">
+                            <h3>Alloy Agents</h3>
+                            <p class="project-description">
+                                Solo independent project combining high-capability/low-propensity models with low-capability/high-propensity models on Control Arena. Exploring whether mixing models from different providers can achieve both strong capability and strong safety properties.
+                            </p>
+                            <p class="last-updated"><em>In progress, March 2026</em></p>
                         </div>
                     </div>
                 </div>
@@ -549,7 +575,7 @@
     </main>
 
     <footer class="footer">
-        <span>&copy; 2025 Diogo Cruz</span>
+        <span>&copy; 2026 Diogo Cruz</span>
         <span>
             Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
         </span>
